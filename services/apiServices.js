@@ -4,7 +4,7 @@ const Email = require("../models/apimodel");
 function fetchEmailHeadersFromMailtrap() {
   return axios
     .get(
-      "https://mailtrap.io/api/accounts/1920099/inboxes/2863496/messages/4212783420/mail_headers",
+      "https://mailtrap.io/api/accounts/1920099/inboxes/2863496/messages/4227411832/mail_headers",
       {
         headers: {
           "Api-Token": "8870f3cfb52086209900fcfe57992c12",

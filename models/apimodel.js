@@ -11,7 +11,5 @@ const emailSchema = new mongoose.Schema({
   content_transfer_encoding: { type: String },
   bcc: { type: String },
 });
-
 const Email = mongoose.model("Email", emailSchema);
-
 module.exports = Email;

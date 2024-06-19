@@ -1,6 +1,5 @@
 const authServices = require("../services/authServices");
 const { ERROR_MESSAGES } = require("../utils/enums/errorcodes");
-// const { generateOTP } = require("../utils/enums/otp");
 
 exports.register = async (req, res) => {
   try {
@@ -62,7 +61,6 @@ exports.sendOTPController = async (req, res) => {
     res.status(500).json({ error: "Failed to send OTP" });
   }
 };
-
 exports.loginWithOTPController = async (req, res) => {
   const { email, otp } = req.body;
   try {

@@ -4,13 +4,13 @@ const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv").config();
 const { sendEmail } = require("../utils/enums/email");
 const { generateOTP } = require("../utils/enums/otp");
+const nodemailer = require("nodemailer");
 const crypto = require("crypto");
 const {
   generateAccessToken,
   generateRefreshToken,
 } = require("../utils/authUtils");
 const { ERROR_MESSAGES } = require("../utils/enums/errorcodes");
-const nodemailer = require("nodemailer");
 
 async function registerUser(userData) {
   const { username, email, password, role } = userData;
@@ -176,6 +176,7 @@ async function verifyOTP(email, enteredOTP) {
     throw error;
   }
 }
+
 module.exports = {
   registerUser,
   login,

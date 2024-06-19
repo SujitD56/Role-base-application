@@ -56,5 +56,3 @@ exports.checkAdminOwnership = async (req, res, next) => {
     res.status(500).json({ error: ERROR_MESSAGES.INTERNAL_SERVER_ERROR });
   }
 };
-
-
